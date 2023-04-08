@@ -7,6 +7,7 @@ export const useNavObserver = (selectors: string, handler: (section: SectionId |
   useEffect(() => {
     // Get all sections
     const headings = document.querySelectorAll(selectors);
+    console.log('headings', headings);
     const headingsArray = Array.from(headings);
     const headerWrapper = document.getElementById(headerID);
 
@@ -15,7 +16,7 @@ export const useNavObserver = (selectors: string, handler: (section: SectionId |
       entries => {
         entries.forEach(entry => {
           const currentY = entry.boundingClientRect.y;
-          const id = entry.target.getAttribute('id');
+          const id = entry.target.getAttribute('id');    
           if (headerWrapper) {
             // Create a decision object
             const decision = {
@@ -36,6 +37,7 @@ export const useNavObserver = (selectors: string, handler: (section: SectionId |
               decision.belowToc
             ) {
               const currentVisible = headingsArray[decision.currentIndex - 1]?.getAttribute('id');
+              console.log('currentVisible', currentVisible);
               handler(currentVisible as SectionId);
             }
           }
@@ -44,7 +46,7 @@ export const useNavObserver = (selectors: string, handler: (section: SectionId |
       {
         root: null,
         threshold: 0.1,
-        rootMargin: '0px 0px -70% 0px',
+        rootMargin: '0px 0px -10px 0px',
       },
     );
     // Observe all the Sections

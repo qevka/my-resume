@@ -13,7 +13,7 @@ const Header: FC = memo(() => {
   const [currentSection, setCurrentSection] = useState<SectionId | null>(null);
   const navSections = useMemo(
     // Todo add back in SectionId.Contact
-    () => [SectionId.About, SectionId.Resume, SectionId.Portfolio, SectionId.Testimonials],
+    () => [SectionId.About, SectionId.Resume, SectionId.Portfolio, SectionId.Testimonials, SectionId.Contact],
     [],
   );
 
@@ -126,7 +126,7 @@ const NavItem: FC<{
   onClick?: () => void;
 }> = memo(({section, current, inactiveClass, activeClass, onClick}) => {
   return (
-    <Link href={`/#${section}`} passHref>
+    <Link href={`/#${section}`} passHref legacyBehavior={true}>
       <a className={classNames(current ? activeClass : inactiveClass)} key={section} onClick={onClick}>
         {section}
       </a>
