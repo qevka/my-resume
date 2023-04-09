@@ -9,9 +9,9 @@ const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
       <div className="flex flex-col pb-4">
         <h2 className="text-xl font-bold">{title}</h2>
         <div className="flex items-center justify-center md:justify-start">
-          <span className="text-sm font-medium italic sm:flex-none">WGU</span>
+          <span className="text-sm font-medium italic sm:flex-none">{location}</span>
           <span className="mx-2">•</span>
-          <span className="text-sm sm:flex-none">July 2019</span>
+          <span className="text-sm sm:flex-none">{date}</span>
         </div>
       </div>
       {content}
