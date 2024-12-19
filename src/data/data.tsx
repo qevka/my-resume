@@ -1,12 +1,10 @@
 import {
   AcademicCapIcon,
   CalendarIcon,
-  ChartBarIcon,
   ChartSquareBarIcon,
   DownloadIcon,
   FlagIcon,
   MapIcon,
-  OfficeBuildingIcon,
   SparklesIcon,
 } from "@heroicons/react/outline";
 
