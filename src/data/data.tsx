@@ -178,11 +178,7 @@ export const skills: SkillGroup[] = [
       {
         name: "Swift",
         level: 6,
-      },
-      {
-        name: "Temporal",
-        level: 5,
-      },
+      }
     ],
   },
   {
@@ -207,6 +203,10 @@ export const skills: SkillGroup[] = [
       {
         name: "XState",
         level: 8,
+      },
+      {
+        name: "Temporal",
+        level: 5,
       },
     ],
   },
