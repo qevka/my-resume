@@ -204,13 +204,17 @@ export const skills: SkillGroup[] = [
         name: "XState",
         level: 8,
       },
+      {
+        name: "Temporal",
+        level: 5,
+      },
     ],
   },
   {
     name: "Flutter Skills",
     skills: [
       {
-        name: "Flutter Performance Optimization (DevTools)",
+        name: "Bloc/Cubit State Management",
         level: 10,
       },
       {
