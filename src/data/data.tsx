@@ -3,7 +3,6 @@ import {
   CalendarIcon,
   ChartSquareBarIcon,
   DownloadIcon,
-  FlagIcon,
   MapIcon,
   SparklesIcon,
 } from "@heroicons/react/outline";
@@ -13,7 +12,7 @@ import InstagramIcon from "../components/Icon/InstagramIcon";
 import LinkedInIcon from "../components/Icon/LinkedInIcon";
 import heroImage from "../images/header-background.jpg";
 import sas from "../images/portfolio/sas.jpg";
-import profilepic from "../images/profilepic.jpg";
+import profilepic from "../images/profilepic.png";
 import testimonialImage from "../images/testimonial.webp";
 import {
   About,
@@ -64,7 +63,8 @@ export const heroData: Hero = {
         An Ohio based{" "}
         <strong className="text-stone-100">Full Stack Software Engineer</strong>
         , currently working at{" "}
-        <strong className="text-stone-100">NinjaTrader</strong> building trading tools.
+        <strong className="text-stone-100">NinjaTrader</strong> building trading
+        tools.
       </p>
       <p className="prose-sm sm:prose-base lg:prose-lg text-stone-200">
         I have a passion for exploring new places and cultures, and I enjoy
@@ -108,18 +108,18 @@ const calculateAge = (birthDate: Date): number => {
   return age;
 };
 
-const myBirthDate = new Date("1989-11-24"); // Replace with your actual birth date
+// const myBirthDate = new Date("1989-11-24"); // Replace with your actual birth date
 
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `While I've contributed to notable companies like NinjaTrader, eXp Realty, and Forward Thinking, one of my proudest achievements was revolutionizing a small aviation manufacturing business. I led the development of a comprehensive manufacturing management system for Sport Aircraft Seats, where I assembled and directed a skilled team to transform manual processes into a streamlined digital workflow. The solution we created not only optimized production efficiency and reduced manufacturing errors but also enhanced customer experience through real-time order tracking and automated updates. This project exemplifies my approach to software engineering: taking complex business challenges and crafting elegant, user-focused solutions that deliver tangible results. Whether working with enterprise systems or specialized manufacturing operations, I bring the same dedication to understanding core business needs and implementing transformative technical solutions.`,
+  description: `I am a force multiplier for engineering teams, transforming complex problems into simple, elegant solutions that accelerate delivery, empower iteration, and create meaningful value for users.`,
   aboutItems: [
     { label: "Location", text: "Dayton, Ohio", Icon: MapIcon },
-    { label: "Age", text: `${calculateAge(myBirthDate)}`, Icon: CalendarIcon },
-    { label: "Nationality", text: "Italian / Irish", Icon: FlagIcon },
+    // { label: "Age", text: `${calculateAge(myBirthDate)}`, Icon: CalendarIcon },
+    // { label: "Nationality", text: "Italian / Irish", Icon: FlagIcon },
     {
       label: "Interests",
-      text: "Paragliding, Hiking, Travel",
+      text: "scuba, paragliding, hiking",
       Icon: SparklesIcon,
     },
     {
@@ -133,129 +133,70 @@ export const aboutData: About = {
 
 /**
  * Skills section
+/**
+ * Technical Skills & Expertise
  */
 export const skills: SkillGroup[] = [
   {
-    name: "Spoken languages",
+    name: "Backend & APIs",
     skills: [
       {
-        name: "English",
+        name: "Node.js/JavaScript/TypeScript",
         level: 10,
       },
       {
-        name: "Palawano (filipino)",
-        level: 5,
+        name: "GraphQL",
+        level: 10,
       },
       {
-        name: "Spanish",
-        level: 3,
+        name: "Temporal (workflow orchestration)",
+        level: 8,
+      },
+      {
+        name: "PostgreSQL",
+        level: 8,
+      },
+      {
+        name: "Scala",
+        level: 4,
+      },
+      {
+        name: "PHP/Laravel",
+        level: 4,
       },
     ],
   },
   {
-    name: "Tech Stacks",
+    name: "Patterns & Practices",
+    skills: [
+      {
+        name: "Cross-platform integrations",
+        level: 10,
+      },
+      {
+        name: "CI/CD",
+        level: 10,
+      },
+      {
+        name: "ELT/data pipelines",
+        level: 8,
+      },
+    ],
+  },
+  {
+    name: "Frontend",
     skills: [
       {
         name: "Flutter/Dart",
         level: 10,
       },
       {
-        name: "GraphQL", 
-        level: 10,
-      },
-      {
-        name: "JavaScript/TypeScript/Node",
-        level: 9,
-      },
-      {
-        name: "PostGresSQL",
-        level: 8,
-      },
-      {
         name: "React",
-        level: 7,
+        level: 8,
       },
       {
         name: "Swift",
         level: 6,
-      },
-    ],
-  },
-  {
-    name: "Technologies",
-    skills: [
-      {
-        name: "Apollo/GraphQL",
-        level: 9,
-      },
-      {
-        name: "AWS",
-        level: 8,
-      },
-      {
-        name: "Docker",
-        level: 8,
-      },
-      {
-        name: "Firebase",
-        level: 8,
-      },
-      {
-        name: "XState",
-        level: 8,
-      },
-      {
-        name: "Temporal",
-        level: 5,
-      },
-    ],
-  },
-  {
-    name: "Flutter Skills",
-    skills: [
-      {
-        name: "Bloc/Cubit State Management",
-        level: 10,
-      },
-      {
-        name: "Flutter Testing",
-        level: 10,
-      },
-      {
-        name: "GetIt/Injectable",
-        level: 10,
-      },
-      {
-        name: "Inherited Widget", 
-        level: 10,
-      },
-      {
-        name: "RxDart/Streams",
-        level: 10,
-      },
-      {
-        name: "Bloc/Cubit State Management",
-        level: 9,
-      },
-      {
-        name: "Code Generation (build_runner)", 
-        level: 9,
-      },
-      {
-        name: "Event Loop (dart:async)",
-        level: 9,
-      },
-      {
-        name: "Flutter Web/Desktop",
-        level: 8,
-      },
-      {
-        name: "Flutter Animation",
-        level: 7,
-      },
-      {
-        name: "Platform Channels",
-        level: 7,
       },
     ],
   },
@@ -284,8 +225,9 @@ export const education: TimelineItem[] = [
     title: "Bachelors of Science in Business Management",
     content: (
       <p>
-        BS in Business Management from WGU with 3 years accounting/management experience. 
-        Started coding career automating accounting tasks with VBA scripts.
+        BS in Business Management from WGU with 3 years accounting/management
+        experience. Started coding career automating accounting tasks with VBA
+        scripts.
       </p>
     ),
   },
@@ -293,36 +235,130 @@ export const education: TimelineItem[] = [
     date: "December 2017",
     location: "",
     title: "Comptia Project+ Certification",
-    content: (
-      <p>
-        
-      </p>
-    ),
+    content: <p></p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
     date: "June 2024 - Present",
-    location: "NinjaTrader",
-    title: "Senior Software Engineer",
+    location: "NinjaTrader/Kraken",
+    title: "Senior Software Engineer II",
     content: (
       <p>
-        Led migration of a legacy trading app to a new architecture, increasing
-        sprint velocity by 300% through CI/CD improvements, secure AI tool
-        adoption, and refactors with clear patterns for junior engineers
+        <ul>
+          <li
+            className="text-wrap text-pretty pl-5"
+            style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+          >
+            • Migrated legacy platform to Flutter — 3x team velocity, faster
+            feature delivery.
+          </li>
+          <li
+            className="text-wrap text-pretty pl-5"
+            style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+          >
+            • Modernized CI/CD — cut regression testing from months to days,
+            quicker releases.
+          </li>
+          <li
+            className="text-wrap text-pretty pl-5"
+            style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+          >
+            • Rewrote Scala codegen for domain models — improved team's
+            adaptability to backend changes.
+          </li>
+        </ul>
       </p>
     ),
   },
   {
     date: "September 2023 - June 2024",
     location: "Forward Thinking Company",
-    title: "Senior Software Engineer",
+    title: "Senior Full Stack Software Engineer",
+    content: (
+      <ul>
+        <li
+          className="text-wrap text-pretty pl-5"
+          style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+        >
+          • Developed multi-platform Flutter apps for Agriculture Logistics
+          (mobile and web) - improving supply chain efficiency.
+        </li>
+        <li
+          className="text-wrap text-pretty pl-5"
+          style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+        ></li>
+        <ul>
+          <li
+            className="text-wrap text-pretty pl-5"
+            style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+          >
+            • Improved team efficiency and release reliability by adding
+            fastlane/CI/CD automations and ruby scripts.
+          </li>
+        </ul>
+      </ul>
+    ),
+  },
+  {
+    date: "Aug 2022 - Jan 2025",
+    location: "FoxTrax.io",
+    title: "CTO/Founder",
     content: (
       <p>
-        Provided full-stack support for an Ag industry company , including
-        Flutter front-end, Firebase back-end, and DevOps with Fastlane and Ruby
-        scripts .
+        <ul>
+          <li
+            className="text-wrap text-pretty pl-5"
+            style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+          >
+            • Built and designed an attribution tracking system powering
+            multi-platform apps:
+            <ul className="mt-1 mb-3">
+              <li
+                className="text-wrap text-pretty pl-7"
+                style={{ textIndent: "-0.8em", paddingLeft: "2em" }}
+              >
+                – Shopify app — React, Node.js, and custom pixel for e-commerce
+                event tracking
+              </li>
+              <li
+                className="text-wrap text-pretty pl-7"
+                style={{ textIndent: "-0.8em", paddingLeft: "2em" }}
+              >
+                – Facebook app integration — Facebook API, GraphQL, analytics
+                workflows
+              </li>
+              <li
+                className="text-wrap text-pretty pl-7"
+                style={{ textIndent: "-0.8em", paddingLeft: "2em" }}
+              >
+                – Mobile app — Flutter (Dart) front-end for on-the-go reporting
+              </li>
+              <li
+                className="text-wrap text-pretty pl-7"
+                style={{ textIndent: "-0.8em", paddingLeft: "2em" }}
+              >
+                – Web dashboard — React web UI for desktop analytics
+              </li>
+              <li
+                className="text-wrap text-pretty pl-7"
+                style={{ textIndent: "-0.8em", paddingLeft: "2em" }}
+              >
+                – Backend infrastructure — Temporal cluster powering ELT
+                workflow pipeline and data sync with Apollo GraphQL
+              </li>
+            </ul>
+          </li>
+          <li
+            className="text-wrap text-pretty pl-5"
+            style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+          >
+            • Enabled users to more accurately track Facebook attribution and
+            run successful ad campaigns, while monitoring their ads and
+            reporting across mobile and desktop applications.
+          </li>
+        </ul>
       </p>
     ),
   },
@@ -331,25 +367,78 @@ export const experience: TimelineItem[] = [
     location: "eXp Realty",
     title: "Lead Software Engineer",
     content: (
-      <p>
-        Led full-stack development of a real estate app , clarifying
-        requirements , uncovering domain knowledge, and securing support through
-        collaboration.
-      </p>
+      <>
+        <ul>
+          <li
+            className="text-wrap text-pretty pl-5"
+            style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+          >
+            • Built and Designed Flutter Apps
+            <ul>
+              <li
+                className="text-wrap text-pretty pl-5"
+                style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+              >
+                - Revenue-split project with AWS middleware layer - enabled
+                agents to track their commissions.
+              </li>
+              <li
+                className="text-wrap text-pretty pl-5"
+                style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+              >
+                - Agent App (mobile and web) - improved agents ability to manage
+                their listings and track their leads.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </>
     ),
   },
   {
     date: "January 2021 - April 2022",
     location: "Sproutly.io",
-    title: "Software Engineer",
+    title: "Full Stack Software Engineer",
     content: (
-      <p>
-        Led development of a web app for a large school district, migrated a
-        legacy app for drone pilots , and supported a custom UI framework
-        integrating native mobile APIs through a bridge layer.
-      </p>
+      <ul>
+        <li
+          className="text-wrap text-pretty pl-5"
+          style={{ textIndent: "-0.8em", paddingLeft: "1.00em" }}
+        >
+          • Enabled patient-provider communication and health plan management
+          through reliable, cross-platform applications.
+          <ul>
+            <li
+              className="text-wrap text-pretty pl-5"
+              style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+            >
+              - Worked on maintaining and building the custom multi-platform UI framework (Haxe, Objective C++, and java bridge), extending the framework's mobile and web functionalities.
+            </li>
+            <li
+              className="text-wrap text-pretty pl-5"
+              style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+            >
+              - Contributed to backend (PHP Laravel) and custom rendering engine for animations in healthcare app.
+            </li>
+          </ul>
+        </li>
+        <li
+          className="text-wrap text-pretty pl-5"
+          style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+        >
+          • Built Flutter web app for school district, managing meetings and
+          slides for thousands of teachers.
+        </li>
+        <li
+          className="text-wrap text-pretty pl-5"
+          style={{ textIndent: "-0.8em", paddingLeft: "1.15em" }}
+        >
+          • Developed Flutter app for drone company, coordinating pilots with
+          logistics managers.
+        </li>
+      </ul>
     ),
-  }
+  },
 ];
 
 /**
@@ -387,7 +476,7 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Github,
-      text: "cmaccarone",
+      text: "cmaccarone (most my work is private)",
       href: "https://github.com/qevka",
     },
   ],
